@@ -1,22 +1,17 @@
 import Link from "next/link";
 
-const LandingPage = () => {
+const ProfilePageThree = () => {
   return (
     <div>
-      <h1>This is the landing page</h1>
+      <h1>This is the profile page three</h1>
       <p>
-        This should show up whether you go to <code>/</code> or{" "}
-        <code>/[languageCode]</code>
+        Redacted for obvious reasons, but we have at the moment three pages
+        related to a user's profile
       </p>
       <ul>
-        <Link href="/en-US">
+        <Link href="/">
           <li>
-            to <a>/en-US</a>
-          </li>
-        </Link>
-        <Link href="/en-US/srl/fooBar">
-          <li>
-            to <a>/en-US/srl/slug</a>
+            to <a>/</a>
           </li>
         </Link>
         <Link href="/en-US/profile/redactedOne">
@@ -39,4 +34,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default ProfilePageThree;

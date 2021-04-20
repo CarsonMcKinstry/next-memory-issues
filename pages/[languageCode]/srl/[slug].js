@@ -1,22 +1,28 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-const LandingPage = () => {
+const SRLPage = () => {
+  const router = useRouter();
+
+  const { slug } = router.query;
+
   return (
     <div>
-      <h1>This is the landing page</h1>
+      <h1>This is the srl/slug page</h1>
       <p>
-        This should show up whether you go to <code>/</code> or{" "}
-        <code>/[languageCode]</code>
+        In the real app we would make API calls, but in this app, we're just
+        going to echo back to you what we get as the slug
       </p>
+      <code>slug = {slug}</code>
       <ul>
-        <Link href="/en-US">
+        <Link href="/">
           <li>
-            to <a>/en-US</a>
+            to <a>/</a>
           </li>
         </Link>
-        <Link href="/en-US/srl/fooBar">
+        <Link href="/en-US/map/fooBar">
           <li>
-            to <a>/en-US/srl/slug</a>
+            to <a>/en-US/map/slug</a>
           </li>
         </Link>
         <Link href="/en-US/profile/redactedOne">
@@ -39,4 +45,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default SRLPage;
